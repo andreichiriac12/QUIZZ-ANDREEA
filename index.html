@@ -90,39 +90,110 @@
             
             <input type="checkbox" id="optionJ2" name="quiz2" value="J">
             <label for="optionJ2">J. poate presupune realizarea unei morfologii atipice, dictată de principiul profilactic, biologic și/sau biomecanic</label><br>
-            
+            <p>3. PRINCIPIUL BIOLOGIC IMPUNE:</p>
+<!-- A treia întrebare -->
+<input type="checkbox" id="optionA3" name="quiz3" value="A">
+<label for="optionA3">A. ca piesa protetică să își modifice volumul și forma în acord cu rata de involuție fiziologică a sistemului stomatognat</label><br>
+
+<input type="checkbox" id="optionB3" name="quiz3" value="B">
+<label for="optionB3">B. generalizarea focarelor de dishomeostazie</label><br>
+
+<input type="checkbox" id="optionC3" name="quiz3" value="C">
+<label for="optionC3">C. ca piesa protetică să fie realizată din materiale netoxice</label><br>
+
+<input type="checkbox" id="optionD3" name="quiz3" value="D">
+<label for="optionD3">D. sacrificii minime de țesuturi dentare dure</label><br>
+
+<input type="checkbox" id="optionE3" name="quiz3" value="E">
+<label for="optionE3">E. biocompatibilitatea materialelor din care se realizează protezele conjuncte</label><br>
+
+<input type="checkbox" id="optionF3" name="quiz3" value="F">
+<label for="optionF3">F. respectarea curburilor fiziologice ale arcadelor edentate</label><br>
+
+<input type="checkbox" id="optionG3" name="quiz3" value="G">
+<label for="optionG3">G. ca piesa protetică să nu își schimbe proprietățile în timp</label><br>
+
+<input type="checkbox" id="optionH3" name="quiz3" value="H">
+<label for="optionH3">H. interzicerea depulpării în scop protetic</label><br>
+
+<input type="checkbox" id="optionI3" name="quiz3" value="I">
+<label for="optionI3">I. ca piesa protetică să nu lezeze țesuturile din jur</label><br>
+
+<input type="checkbox" id="optionJ3" name="quiz3" value="J">
+<label for="optionJ3">J. realizarea limitelor preparațiilor supragingival</label><br>
+            <p>4. DESPRE FORȚELE CE ACȚIONEAZĂ LA NIVELUL ARCADELOR DENTARE:</p>
+<!-- A patra întrebare -->
+<input type="checkbox" id="optionA4" name="quiz4" value="A">
+<label for="optionA4">A. punctul de aplicare al forțelor nu este la nivelul arcadelor dentare</label><br>
+
+<input type="checkbox" id="optionB4" name="quiz4" value="B">
+<label for="optionB4">B. intensitatea forțelor depinde de starea dentației și tipul alimentației</label><br>
+
+<input type="checkbox" id="optionC4" name="quiz4" value="C">
+<label for="optionC4">C. forțele orizontale sunt tangențiale și radiale</label><br>
+
+<input type="checkbox" id="optionD4" name="quiz4" value="D">
+<label for="optionD4">D. se clasifică, după direcție, în verticale și orizontale</label><br>
+
+<input type="checkbox" id="optionE4" name="quiz4" value="E">
+<label for="optionE4">E. sunt caracterizate doar de direcție și sens</label><br>
+
+<input type="checkbox" id="optionF4" name="quiz4" value="F">
+<label for="optionF4">F. forțele orizontale tangențiale nu se exercită la nivelul punctelor de contact</label><br>
+
+<input type="checkbox" id="optionG4" name="quiz4" value="G">
+<label for="optionG4">G. forțele se compun și descompun după regula dreptunghiului (paralelogram)</label><br>
+
+<input type="checkbox" id="optionH4" name="quiz4" value="H">
+<label for="optionH4">H. forțele verticale apar doar în timpul masticației (și deglutiției)</label><br>
+
+<input type="checkbox" id="optionI4" name="quiz4" value="I">
+<label for="optionI4">I. media este aproximativ 30 kgf</label><br>
+
+<input type="checkbox" id="optionJ4" name="quiz4" value="J">
+<label for="optionJ4">J. forțele verticale sunt de presiune și tracțiune</label><br>
+
             <button type="button" onclick="checkAnswers()">Trimite</button>
         </form>
     </div>
     
     <div id="feedback" class="feedback"></div>
 
-    <script>
-        function checkAnswers() {
-            // Răspunsurile corecte pentru fiecare întrebare
-            let correctAnswers1 = ['A', 'B', 'E', 'F', 'I'];
-            let correctAnswers2 = ['B', 'C', 'D', 'E', 'J'];
-            
-            // Selectăm răspunsurile pentru fiecare întrebare
-            let selectedAnswers1 = Array.from(document.querySelectorAll('input[name="quiz1"]:checked')).map(el => el.value);
-            let selectedAnswers2 = Array.from(document.querySelectorAll('input[name="quiz2"]:checked')).map(el => el.value);
-            
-            let feedbackText = 'Răspunsuri corecte pentru întrebarea 1:<br>';
-            
-            // Afișăm răspunsurile corecte pentru întrebarea 1
-            correctAnswers1.forEach(answer => {
-                feedbackText += `${answer}<br>`;
-            });
-            
-            feedbackText += '<br>Răspunsuri corecte pentru întrebarea 2:<br>';
-            
-            // Afișăm răspunsurile corecte pentru întrebarea 2
-            correctAnswers2.forEach(answer => {
-                feedbackText += `${answer}<br>`;
-            });
+    function checkAnswers() {
+    let correctAnswers1 = ['A', 'B', 'E', 'F', 'I'];
+    let correctAnswers2 = ['B', 'C', 'D', 'E', 'J'];
+    let correctAnswers3 = ['C', 'D', 'E', 'G', 'I'];
+    let correctAnswers4 = ['B', 'C', 'D', 'I', 'J'];
 
-            document.getElementById('feedback').innerHTML = feedbackText;
-        }
+    let selectedAnswers1 = Array.from(document.querySelectorAll('input[name="quiz1"]:checked')).map(el => el.value);
+    let selectedAnswers2 = Array.from(document.querySelectorAll('input[name="quiz2"]:checked')).map(el => el.value);
+    let selectedAnswers3 = Array.from(document.querySelectorAll('input[name="quiz3"]:checked')).map(el => el.value);
+    let selectedAnswers4 = Array.from(document.querySelectorAll('input[name="quiz4"]:checked')).map(el => el.value);
+
+    let feedbackText = 'Răspunsuri corecte pentru întrebarea 1:<br>';
+    correctAnswers1.forEach(answer => {
+        feedbackText += `${answer}<br>`;
+    });
+
+    feedbackText += '<br>Răspunsuri corecte pentru întrebarea 2:<br>';
+    correctAnswers2.forEach(answer => {
+        feedbackText += `${answer}<br>`;
+    });
+
+    feedbackText += '<br>Răspunsuri corecte pentru întrebarea 3:<br>';
+    correctAnswers3.forEach(answer => {
+        feedbackText += `${answer}<br>`;
+    });
+
+    feedbackText += '<br>Răspunsuri corecte pentru întrebarea 4:<br>';
+    correctAnswers4.forEach(answer => {
+        feedbackText += `${answer}<br>`;
+    });
+
+    document.getElementById('feedback').innerHTML = feedbackText;
+}
+
+
     </script>
 </body>
 </html>
