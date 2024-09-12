@@ -3,202 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Profilaxie și Principii Curative</title>
+    <title>Quiz</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
+        .answer {
+            display: block;
+            margin: 5px 0;
         }
-        h1 {
-            color: #2c3e50;
-        }
-        .question {
-            margin-bottom: 20px;
-        }
-        .feedback {
-            font-weight: bold;
+        .correct {
             color: green;
+        }
+        .incorrect {
+            color: red;
         }
     </style>
 </head>
 <body>
-    <h1>Quiz - Profilaxia și Principiile Curative în Edentația Parțială</h1>
-    
-    <div class="question">
-        <p>1. DESPRE PROFILAXIA LOCALĂ ȘI LOCO-REGIONALĂ ÎN EDENTAȚIA PARȚIALĂ REDUSĂ, SE POATE AFIRMA:</p>
-        <form id="quizForm">
-            <!-- Prima întrebare -->
-            <input type="checkbox" id="optionA1" name="quiz1" value="A">
-            <label for="optionA1">A. este primară, secundară și terțiară</label><br>
-            
-            <input type="checkbox" id="optionB1" name="quiz1" value="B">
-            <label for="optionB1">B. este primară și secundară</label><br>
-            
-            <input type="checkbox" id="optionC1" name="quiz1" value="C">
-            <label for="optionC1">C. profilaxia primară are în vedere integrarea morfo-funcțională a primelor proteze fixe aplicate pacientului</label><br>
-            
-            <input type="checkbox" id="optionD1" name="quiz1" value="D">
-            <label for="optionD1">D. profilaxia primară se adresează dinților indemni, în sensul prevenirii migrării acestora</label><br>
-            
-            <input type="checkbox" id="optionE1" name="quiz1" value="E">
-            <label for="optionE1">E. profilaxia terțiară are în vedere refacerea corectă a morfo-fiziologiei și prevenirea complicațiilor edentațiilor</label><br>
-            
-            <input type="checkbox" id="optionF1" name="quiz1" value="F">
-            <label for="optionF1">F. profilaxia secundară are în vedere tratarea şi prevenirea complicaţiilor locale şi loco-regionale consecutive bolii carioase şi bolii parodontale</label><br>
-            
-            <input type="checkbox" id="optionG1" name="quiz1" value="G">
-            <label for="optionG1">G. profilaxia terțiară are în vedere suprimarea factorilor de risc ce duc la edentație</label><br>
-            
-            <input type="checkbox" id="optionH1" name="quiz1" value="H">
-            <label for="optionH1">H. profilaxia secundară are în vedere prevenirea sindromului disfuncțional secundar apariției edentației</label><br>
-            
-            <input type="checkbox" id="optionI1" name="quiz1" value="I">
-            <label for="optionI1">I. profilaxia primară are în vedere prevenirea îmbolnăvirii prin boala carioasă și boala parodontală, fluorizare, sigilare</label><br>
-            
-            <input type="checkbox" id="optionJ1" name="quiz1" value="J">
-            <label for="optionJ1">J. profilaxia primară are în vedere instruirea și conștientizarea pacientului asupra igienizării primare a protezelor fixe</label><br>
-            
-            <p>2. DESPRE PRINCIPIUL CURATIV, SE POATE AFIRMA CĂ:</p>
-            <!-- A doua întrebare -->
-            <input type="checkbox" id="optionA2" name="quiz2" value="A">
-            <label for="optionA2">A. presupune supraconturarea coroanelor în vederea protejării parodonțiului marginal de impactul direct alimentar</label><br>
-            
-            <input type="checkbox" id="optionB2" name="quiz2" value="B">
-            <label for="optionB2">B. presupune recuperarea funcției de deglutiție și fizionomice</label><br>
-            
-            <input type="checkbox" id="optionC2" name="quiz2" value="C">
-            <label for="optionC2">C. prevede refacerea morfologică a arcadelor și recuperarea funcțională</label><br>
-            
-            <input type="checkbox" id="optionD2" name="quiz2" value="D">
-            <label for="optionD2">D. presupune recuperarea funcției masticatorii și fonatorii</label><br>
-            
-            <input type="checkbox" id="optionE2" name="quiz2" value="E">
-            <label for="optionE2">E. impune modelarea unor arii ocluzale care să asigure executarea deglutiției în relație centrică corectă, consecutiv unei bune stabilizări a mandibulei</label><br>
-            
-            <input type="checkbox" id="optionF2" name="quiz2" value="F">
-            <label for="optionF2">F. se aplică individual, independent de celelalte principii</label><br>
-            
-            <input type="checkbox" id="optionG2" name="quiz2" value="G">
-            <label for="optionG2">G. stabilește că deglutiția este cea mai importantă funcție, prin frecvența și numărul mare de contacte dentare - mai importantă decât masticația</label><br>
-            
-            <input type="checkbox" id="optionH2" name="quiz2" value="H">
-            <label for="optionH2">H. recomandă luarea în considerare a unor caracteristici individuale ale bolnavului legate de ocluzie, relații mandibulo-craniene etc. în realizarea funcției fizionomice</label><br>
-            
-            <input type="checkbox" id="optionI2" name="quiz2" value="I">
-            <label for="optionI2">I. recomandă punțile cu contact punctiform în zona frontală în vederea igienizării ușoare</label><br>
-            
-            <input type="checkbox" id="optionJ2" name="quiz2" value="J">
-            <label for="optionJ2">J. poate presupune realizarea unei morfologii atipice, dictată de principiul profilactic, biologic și/sau biomecanic</label><br>
-            <p>3. PRINCIPIUL BIOLOGIC IMPUNE:</p>
-<!-- A treia întrebare -->
-<input type="checkbox" id="optionA3" name="quiz3" value="A">
-<label for="optionA3">A. ca piesa protetică să își modifice volumul și forma în acord cu rata de involuție fiziologică a sistemului stomatognat</label><br>
+    <form id="quizForm">
+        <div>
+            <h3>1. DESPRE PROFILAXIA LOCALĂ ȘI LOCO-REGIONALĂ ÎN EDENTAȚIA PARȚIALĂ REDUSĂ, SE POATE AFIRMA:</h3>
+            <input type="checkbox" id="q1a" name="quiz1" value="A"> <label for="q1a" class="answer">A. este primară, secundară și terțiară</label>
+            <input type="checkbox" id="q1b" name="quiz1" value="B"> <label for="q1b" class="answer">B. este primară și secundară</label>
+            <input type="checkbox" id="q1c" name="quiz1" value="C"> <label for="q1c" class="answer">C. profilaxia primară are în vedere integrarea morfo-funcțională a primelor proteze fixe aplicate pacientului</label>
+            <input type="checkbox" id="q1d" name="quiz1" value="D"> <label for="q1d" class="answer">D. profilaxia primară se adresează dinților indemni, în sensul prevenirii migrării acestora</label>
+            <input type="checkbox" id="q1e" name="quiz1" value="E"> <label for="q1e" class="answer">E. profilaxia terțiară are în vedere refacerea corectă a morfo-fiziologiei și prevenirea complicațiilor edentațiilor</label>
+            <input type="checkbox" id="q1f" name="quiz1" value="F"> <label for="q1f" class="answer">F. profilaxia secundară are în vedere tratarea şi prevenirea complicaţiilor locale şi loco-regionale consecutive bolii carioase şi bolii parodontale</label>
+            <input type="checkbox" id="q1g" name="quiz1" value="G"> <label for="q1g" class="answer">G. profilaxia terțiară are în vedere suprimarea factorilor de risc ce duc la edentație</label>
+            <input type="checkbox" id="q1h" name="quiz1" value="H"> <label for="q1h" class="answer">H. profilaxia secundară are în vedere prevenirea sindromului disfuncțional secundar apariției edentației</label>
+            <input type="checkbox" id="q1i" name="quiz1" value="I"> <label for="q1i" class="answer">I. profilaxia primară are în vedere prevenirea îmbolnăvirii prin boala carioasă și boala parodontală, fluorizare, sigilare</label>
+            <input type="checkbox" id="q1j" name="quiz1" value="J"> <label for="q1j" class="answer">J. profilaxia primară are în vedere instruirea și conștientizarea pacientului asupra igienizării primare a protezelor fixe</label>
+        </div>
 
-<input type="checkbox" id="optionB3" name="quiz3" value="B">
-<label for="optionB3">B. generalizarea focarelor de dishomeostazie</label><br>
+        <div>
+            <h3>2. DESPRE PRINCIPIUL CURATIV, SE POATE AFIRMA CĂ:</h3>
+            <input type="checkbox" id="q2a" name="quiz2" value="A"> <label for="q2a" class="answer">A. presupune supraconturarea coroanelor în vederea protejării parodonțiului marginal de impactul direct alimentar</label>
+            <input type="checkbox" id="q2b" name="quiz2" value="B"> <label for="q2b" class="answer">B. presupune recuperarea funcției de deglutiție și fizionomice</label>
+            <input type="checkbox" id="q2c" name="quiz2" value="C"> <label for="q2c" class="answer">C. prevede refacerea morfologică a arcadelor și recuperarea funcțională</label>
+            <input type="checkbox" id="q2d" name="quiz2" value="D"> <label for="q2d" class="answer">D. presupune recuperarea funcției masticatorii și fonatorii</label>
+            <input type="checkbox" id="q2e" name="quiz2" value="E"> <label for="q2e" class="answer">E. impune modelarea unor arii ocluzale care să asigure executarea deglutiției în relație centrică corectă, consecutiv unei bune stabilizări a mandibulei</label>
+            <input type="checkbox" id="q2f" name="quiz2" value="F"> <label for="q2f" class="answer">F. se aplică individual, independent de celelalte principii</label>
+            <input type="checkbox" id="q2g" name="quiz2" value="G"> <label for="q2g" class="answer">G. stabilește că deglutiția este cea mai importantă funcție, prin frecvența și numărul mare de contacte dentare - mai importantă decât masticația</label>
+            <input type="checkbox" id="q2h" name="quiz2" value="H"> <label for="q2h" class="answer">H. recomandă luarea în considerare a unor caracteristici individuale ale bolnavului legate de ocluzie, relații mandibulo-craniene etc. în realizarea funcției fizionomice</label>
+            <input type="checkbox" id="q2i" name="quiz2" value="I"> <label for="q2i" class="answer">I. recomandă punțile cu contact punctiform în zona frontală în vederea igienizării ușoare</label>
+            <input type="checkbox" id="q2j" name="quiz2" value="J"> <label for="q2j" class="answer">J. poate presupune realizarea unei morfologii atipice, dictată de principiul profilactic, biologic și/sau biomecanic</label>
+        </div>
 
-<input type="checkbox" id="optionC3" name="quiz3" value="C">
-<label for="optionC3">C. ca piesa protetică să fie realizată din materiale netoxice</label><br>
+        <div>
+            <h3>3. PRINCIPIUL BIOLOGIC IMPUNE:</h3>
+            <input type="checkbox" id="q3a" name="quiz3" value="A"> <label for="q3a" class="answer">A. ca piesa protetică să își modifice volumul și forma în acord cu rata de involuție fiziologică a sistemului stomatognat</label>
+            <input type="checkbox" id="q3b" name="quiz3" value="B"> <label for="q3b" class="answer">B. generalizarea focarelor de dishomeostazie</label>
+            <input type="checkbox" id="q3c" name="quiz3" value="C"> <label for="q3c" class="answer">C. ca piesa protetică să fie realizată din materiale netoxice</label>
+            <input type="checkbox" id="q3d" name="quiz3" value="D"> <label for="q3d" class="answer">D. sacrificii minime de țesuturi dentare dure</label>
+            <input type="checkbox" id="q3e" name="quiz3" value="E"> <label for="q3e" class="answer">E. biocompatibilitatea materialelor din care se realizează protezele conjuncte</label>
+            <input type="checkbox" id="q3f" name="quiz3" value="F"> <label for="q3f" class="answer">F. respectarea curburilor fiziologice ale arcadelor edentate</label>
+            <input type="checkbox" id="q3g" name="quiz3" value="G"> <label for="q3g" class="answer">G. ca piesa protetică să nu își schimbe proprietățile în timp</label>
+            <input type="checkbox" id="q3h" name="quiz3" value="H"> <label for="q3h" class="answer">H. interzicerea depulpării în scop protetic</label>
+            <input type="checkbox" id="q3i" name="quiz3" value="I"> <label for="q3i" class="answer">I. ca piesa protetică să nu lezeze țesuturile din jur</label>
+            <input type="checkbox" id="q3j" name="quiz3" value="J"> <label for="q3j" class="answer">J. realizarea limitelor preparațiilor supragingival</label>
+        </div>
 
-<input type="checkbox" id="optionD3" name="quiz3" value="D">
-<label for="optionD3">D. sacrificii minime de țesuturi dentare dure</label><br>
+        <div>
+            <h3>4. DESPRE FORȚELE CE ACȚIONEAZĂ LA NIVELUL ARCADELOR DENTARE:</h3>
+            <input type="checkbox" id="q4a" name="quiz4" value="A"> <label for="q4a" class="answer">A. punctul de aplicare al forțelor nu este la nivelul arcadelor dentare</label>
+            <input type="checkbox" id="q4b" name="quiz4" value="B"> <label for="q4b" class="answer">B. intensitatea forțelor depinde de starea dentației și tipul alimentației</label>
+            <input type="checkbox" id="q4c" name="quiz4" value="C"> <label for="q4c" class="answer">C. forțele orizontale sunt tangențiale și radiale</label>
+            <input type="checkbox" id="q4d" name="quiz4" value="D"> <label for="q4d" class="answer">D. se clasifică, după direcție, în verticale și orizontale</label>
+            <input type="checkbox" id="q4e" name="quiz4" value="E"> <label for="q4e" class="answer">E. sunt caracterizate doar de direcție și sens</label>
+            <input type="checkbox" id="q4f" name="quiz4" value="F"> <label for="q4f" class="answer">F. forțele orizontale tangențiale nu se exercită la nivelul punctelor de contact</label>
+            <input type="checkbox" id="q4g" name="quiz4" value="G"> <label for="q4g" class="answer">G. forțele se compun și descompun după regula dreptunghiului (paralelogram)</label>
+            <input type="checkbox" id="q4h" name="quiz4" value="H"> <label for="q4h" class="answer">H. forțele verticale apar doar în timpul masticației (și deglutiției)</label>
+            <input type="checkbox" id="q4i" name="quiz4" value="I"> <label for="q4i" class="answer">I. media este aproximativ 30 kgf</label>
+            <input type="checkbox" id="q4j" name="quiz4" value="J"> <label for="q4j" class="answer">J. forțele verticale sunt de presiune și tracțiune</label>
+        </div>
 
-<input type="checkbox" id="optionE3" name="quiz3" value="E">
-<label for="optionE3">E. biocompatibilitatea materialelor din care se realizează protezele conjuncte</label><br>
-
-<input type="checkbox" id="optionF3" name="quiz3" value="F">
-<label for="optionF3">F. respectarea curburilor fiziologice ale arcadelor edentate</label><br>
-
-<input type="checkbox" id="optionG3" name="quiz3" value="G">
-<label for="optionG3">G. ca piesa protetică să nu își schimbe proprietățile în timp</label><br>
-
-<input type="checkbox" id="optionH3" name="quiz3" value="H">
-<label for="optionH3">H. interzicerea depulpării în scop protetic</label><br>
-
-<input type="checkbox" id="optionI3" name="quiz3" value="I">
-<label for="optionI3">I. ca piesa protetică să nu lezeze țesuturile din jur</label><br>
-
-<input type="checkbox" id="optionJ3" name="quiz3" value="J">
-<label for="optionJ3">J. realizarea limitelor preparațiilor supragingival</label><br>
-            <p>4. DESPRE FORȚELE CE ACȚIONEAZĂ LA NIVELUL ARCADELOR DENTARE:</p>
-<!-- A patra întrebare -->
-<input type="checkbox" id="optionA4" name="quiz4" value="A">
-<label for="optionA4">A. punctul de aplicare al forțelor nu este la nivelul arcadelor dentare</label><br>
-
-<input type="checkbox" id="optionB4" name="quiz4" value="B">
-<label for="optionB4">B. intensitatea forțelor depinde de starea dentației și tipul alimentației</label><br>
-
-<input type="checkbox" id="optionC4" name="quiz4" value="C">
-<label for="optionC4">C. forțele orizontale sunt tangențiale și radiale</label><br>
-
-<input type="checkbox" id="optionD4" name="quiz4" value="D">
-<label for="optionD4">D. se clasifică, după direcție, în verticale și orizontale</label><br>
-
-<input type="checkbox" id="optionE4" name="quiz4" value="E">
-<label for="optionE4">E. sunt caracterizate doar de direcție și sens</label><br>
-
-<input type="checkbox" id="optionF4" name="quiz4" value="F">
-<label for="optionF4">F. forțele orizontale tangențiale nu se exercită la nivelul punctelor de contact</label><br>
-
-<input type="checkbox" id="optionG4" name="quiz4" value="G">
-<label for="optionG4">G. forțele se compun și descompun după regula dreptunghiului (paralelogram)</label><br>
-
-<input type="checkbox" id="optionH4" name="quiz4" value="H">
-<label for="optionH4">H. forțele verticale apar doar în timpul masticației (și deglutiției)</label><br>
-
-<input type="checkbox" id="optionI4" name="quiz4" value="I">
-<label for="optionI4">I. media este aproximativ 30 kgf</label><br>
-
-<input type="checkbox" id="optionJ4" name="quiz4" value="J">
-<label for="optionJ4">J. forțele verticale sunt de presiune și tracțiune</label><br>
-
-            <button type="button" onclick="checkAnswers()">Trimite</button>
-        </form>
-    </div>
-    
-    <div id="feedback" class="feedback"></div>
+        <button type="button" onclick="checkAnswers()">Trimite</button>
+    </form>
+    <div id="feedback"></div>
 
     <script>
-    function checkAnswers() {
-        // Răspunsurile corecte pentru fiecare întrebare
-        let correctAnswers1 = ['A', 'B', 'E', 'F', 'I'];
-        let correctAnswers2 = ['B', 'C', 'D', 'E', 'J'];
-        let correctAnswers3 = ['C', 'D', 'E', 'G', 'I'];
-        let correctAnswers4 = ['B', 'C', 'D', 'I', 'J'];
+        function checkAnswers() {
+            // Răspunsurile corecte pentru fiecare întrebare
+            const correctAnswers = {
+                quiz1: ['A', 'B', 'E', 'F', 'I'],
+                quiz2: ['B', 'C', 'D', 'E', 'J'],
+                quiz3: ['C', 'D', 'E', 'G', 'I'],
+                quiz4: ['B', 'C', 'D', 'I', 'J']
+            };
 
-        // Selectăm răspunsurile pentru fiecare întrebare
-        let selectedAnswers1 = Array.from(document.querySelectorAll('input[name="quiz1"]:checked')).map(el => el.value);
-        let selectedAnswers2 = Array.from(document.querySelectorAll('input[name="quiz2"]:checked')).map(el => el.value);
-        let selectedAnswers3 = Array.from(document.querySelectorAll('input[name="quiz3"]:checked')).map(el => el.value);
-        let selectedAnswers4 = Array.from(document.querySelectorAll('input[name="quiz4"]:checked')).map(el => el.value);
+            // Curăță stilurile anterioare
+            resetStyles();
 
-        // Afișăm răspunsurile corecte pentru fiecare întrebare
-        let feedbackText = 'Răspunsuri corecte pentru întrebarea 1:<br>';
-        correctAnswers1.forEach(answer => {
-            feedbackText += `${answer}<br>`;
-        });
+            // Funcție pentru a aplica stiluri corecte și greșite
+            function highlightAnswers(questionName, correctAnswers) {
+                const allAnswers = document.querySelectorAll(`input[name="${questionName}"]`);
+                allAnswers.forEach(answer => {
+                    const label = document.querySelector(`label[for="${answer.id}"]`);
+                    if (correctAnswers.includes(answer.value)) {
+                        label.classList.add('correct'); // Verde pentru răspunsuri corecte
+                    } else {
+                        label.classList.add('incorrect'); // Roșu pentru răspunsuri greșite
+                    }
+                });
+            }
 
-        feedbackText += '<br>Răspunsuri corecte pentru întrebarea 2:<br>';
-        correctAnswers2.forEach(answer => {
-            feedbackText += `${answer}<br>`;
-        });
+            // Evidențiază răspunsurile pentru fiecare întrebare
+            highlightAnswers('quiz1', correctAnswers.quiz1);
+            highlightAnswers('quiz2', correctAnswers.quiz2);
+            highlightAnswers('quiz3', correctAnswers.quiz3);
+            highlightAnswers('quiz4', correctAnswers.quiz4);
 
-        feedbackText += '<br>Răspunsuri corecte pentru întrebarea 3:<br>';
-        correctAnswers3.forEach(answer => {
-            feedbackText += `${answer}<br>`;
-        });
+            // Construiește feedback-ul
+            let feedbackText = 'Răspunsuri corecte pentru întrebarea 1:<br>';
+            correctAnswers.quiz1.forEach(answer => {
+                feedbackText += `${answer}<br>`;
+            });
 
-        feedbackText += '<br>Răspunsuri corecte pentru întrebarea 4:<br>';
-        correctAnswers4.forEach(answer => {
-            feedbackText += `${answer}<br>`;
-        });
+            feedbackText += '<br>Răspunsuri corecte pentru întrebarea 2:<br>';
+            correctAnswers.quiz2.forEach(answer => {
+                feedbackText += `${answer}<br>`;
+            });
 
-        document.getElementById('feedback').innerHTML = feedbackText;
-    }
-</script>
+            feedbackText += '<br>Răspunsuri corecte pentru întrebarea 3:<br>';
+            correctAnswers.quiz3.forEach(answer => {
+                feedbackText += `${answer}<br>`;
+            });
 
+            feedbackText += '<br>Răspunsuri corecte pentru întrebarea 4:<br>';
+            correctAnswers.quiz4.forEach(answer => {
+                feedbackText += `${answer}<br>`;
+            });
 
-   
+            // Afișează feedback-ul în elementul cu ID-ul 'feedback'
+            document.getElementById('feedback').innerHTML = feedbackText;
+        }
+
+        // Funcție pentru a reseta stilurile răspunsurilor
+        function resetStyles() {
+            const allLabels = document.querySelectorAll('label.answer');
+            allLabels.forEach(label => {
+                label.classList.remove('correct', 'incorrect'); // Resetează stilurile
+            });
+        }
+    </script>
 </body>
 </html>
