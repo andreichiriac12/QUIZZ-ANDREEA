@@ -1,20 +1,91 @@
-## Întrebarea 1
-Care este capitala Franței?
-- [ ] Londra
-- [ ] Berlin
-- [x] Paris
-- [ ] Madrid
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Edentație Parțială</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .feedback {
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quiz - Profilaxia în Edentația Parțială Redusă</h1>
+    
+    <div class="question">
+        <p>DESPRE PROFILAXIA LOCALĂ ȘI LOCO-REGIONALĂ ÎN EDENTAȚIA PARȚIALĂ REDUSĂ, SE POATE AFIRMA:</p>
+        <form id="quizForm">
+            <input type="checkbox" id="optionA" name="quiz" value="A">
+            <label for="optionA">A. este primară, secundară și terțiară</label><br>
+            
+            <input type="checkbox" id="optionB" name="quiz" value="B">
+            <label for="optionB">B. este primară și secundară</label><br>
+            
+            <input type="checkbox" id="optionC" name="quiz" value="C">
+            <label for="optionC">C. profilaxia primară are în vedere integrarea morfo-funcțională a primelor proteze fixe aplicate pacientului</label><br>
+            
+            <input type="checkbox" id="optionD" name="quiz" value="D">
+            <label for="optionD">D. profilaxia primară se adresează dinților indemni, în sensul prevenirii migrării acestora</label><br>
+            
+            <input type="checkbox" id="optionE" name="quiz" value="E">
+            <label for="optionE">E. profilaxia terțiară are în vedere refacerea corectă a morfo-fiziologiei și prevenirea complicațiilor edentațiilor</label><br>
+            
+            <input type="checkbox" id="optionF" name="quiz" value="F">
+            <label for="optionF">F. profilaxia secundară are în vedere tratarea şi prevenirea complicaţiilor locale şi loco-regionale consecutive bolii carioase şi bolii parodontale</label><br>
+            
+            <input type="checkbox" id="optionG" name="quiz" value="G">
+            <label for="optionG">G. profilaxia terțiară are în vedere suprimarea factorilor de risc ce duc la edentație</label><br>
+            
+            <input type="checkbox" id="optionH" name="quiz" value="H">
+            <label for="optionH">H. profilaxia secundară are în vedere prevenirea sindromului disfuncțional secundar apariției edentației</label><br>
+            
+            <input type="checkbox" id="optionI" name="quiz" value="I">
+            <label for="optionI">I. profilaxia primară are în vedere prevenirea îmbolnăvirii prin boala carioasă și boala parodontală, fluorizare, sigilare</label><br>
+            
+            <input type="checkbox" id="optionJ" name="quiz" value="J">
+            <label for="optionJ">J. profilaxia primară are în vedere instruirea și conștientizarea pacientului asupra igienizării primare a protezelor fixe</label><br>
+            
+            <button type="button" onclick="checkAnswers()">Trimite</button>
+        </form>
+    </div>
+    
+    <div id="feedback" class="feedback"></div>
 
-## Întrebarea 2
-Care este cea mai mare planetă din sistemul nostru solar?
-- [ ] Terra
-- [ ] Marte
-- [ ] Venus
-- [x] Jupiter
+    <script>
+        function checkAnswers() {
+            let correctAnswers = ['A', 'D', 'E', 'F', 'H', 'I'];
+            let selectedAnswers = Array.from(document.querySelectorAll('input[name="quiz"]:checked')).map(el => el.value);
+            let feedbackText = '';
 
-## Întrebarea 3
-Ce an a avut loc prima misiune pe Lună?
-- [ ] 1965
-- [ ] 1967
-- [x] 1969
-- [ ] 1971
+            correctAnswers.forEach(answer => {
+                if (selectedAnswers.includes(answer)) {
+                    feedbackText += `Corect: ${answer}<br>`;
+                } else {
+                    feedbackText += `Lipsă răspuns corect: ${answer}<br>`;
+                }
+            });
+
+            selectedAnswers.forEach(answer => {
+                if (!correctAnswers.includes(answer)) {
+                    feedbackText += `Greșit: ${answer}<br>`;
+                }
+            });
+
+            document.getElementById('feedback').innerHTML = feedbackText;
+        }
+    </script>
+</body>
+</html>
